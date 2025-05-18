@@ -1,13 +1,103 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>My Webpage</title>
-    </head>
-    <body>
-        hello, homepage
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> </head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <nav id="navbar-example" class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container">
+            <div class="navbar-brand-container">
+                <a class="navbar-brand navbar-brand-title" href="#">Sathvik PN</a>
+                <span class="navbar-brand-subtitle">Software Engineer</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span id="indian-time" class="nav-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="container custom-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="custom-heading">About Me</h2>
+                    <p class="custom-paragraph">
+                        A brief introduction about yourself.  Highlight your skills,
+                        experience, and career goals.  This section should capture the
+                        attention of potential employers.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://pbs.twimg.com/profile_images/1733226010181771264/YlPo8owc_400x400.jpg" alt="Your Profile" class="img-fluid rounded">
+                    <!-- load image from an url -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 My Personal Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq4oDfGd" crossorigin="anonymous"></script>
+    <script>
+        // Function to update the Indian time
+        function updateIndianTime() {
+            const now = new Date();
+            const hours = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false });
+            const minutes = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', minute: '2-digit' });
+            const seconds = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', second: '2-digit' });
+            let ampm = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: true }).split(' ')[1];
+            ampm =  ampm.toLocaleUpperCase();
+
+            document.getElementById('indian-time').innerHTML = `
+                <span class="hour">${hours}</span>
+                <span class="colon">:</span>
+                <span class="minute">${minutes}</span> 
+                <span class="ampm"> ${ampm}</span>`;
+        }
+
+        // Call the function to display time immediately when the page loads
+        updateIndianTime();
+
+        // Update the time every second (1000 milliseconds)
+        setInterval(updateIndianTime, 1000);
+
+        // Smooth scrolling for internal links and navigation to details page
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+
+                if (targetId === '#about') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (targetId === 'details.html') {
+                    window.location.href = 'details.html';
+                }
+            });
+        });
+    </script>
+</body>
 </html>
