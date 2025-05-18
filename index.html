@@ -70,34 +70,26 @@
             let ampm = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: true }).split(' ')[1];
             ampm =  ampm.toLocaleUpperCase();
 
-            document.getElementById('indian-time').innerHTML = `
-                <span class="hour">${hours}</span>
-                <span class="colon">:</span>
-                <span class="minute">${minutes}</span> 
-                <span class="ampm"> ${ampm}</span>`;
+            document.getElementById('indian-time').textContent = now.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second:"numeric", hour12: true }).replace(/am|pm/i, m => m.toUpperCase());
         }
+
+        // Dynamically set main's padding-top based on navbar height
+        function setMainPadding() {
+            var navbar = document.querySelector('.navbar.fixed-top');
+            var main = document.querySelector('main');
+            if (navbar && main) {
+                var navHeight = navbar.offsetHeight;
+                main.style.paddingTop = navHeight + 'px';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', setMainPadding);
+        window.addEventListener('resize', setMainPadding);
 
         // Call the function to display time immediately when the page loads
         updateIndianTime();
 
         // Update the time every second (1000 milliseconds)
         setInterval(updateIndianTime, 1000);
-
-        // Smooth scrolling for internal links and navigation to details page
-        document.querySelectorAll('a.nav-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-
-                if (targetId === '#about') {
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                } else if (targetId === 'details.html') {
-                    window.location.href = 'details.html';
-                }
-            });
-        });
     </script>
 </body>
 </html>
