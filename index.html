@@ -16,14 +16,19 @@
 
         <!-- navbar ----------------------------------------------------------------- -->
         <nav id="navbar-example" class="navbar navbar-expand-lg bg-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand navbar-brand-title" href="index.html">Sathvik PN</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <div class="wrapper d-flex align-items-center justify-content-between flex-wrap">
+                <div class="navbar-brand-container">
+                    <a class="navbar-brand navbar-brand-title" href="index.html">Sathvik PN</a>
+                    <!-- <span class="navbar-brand-subtitle">software engineer</span> -->
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <nav class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center flex-row gap-2">
                         <li class="nav-item">
                             <span id="indian-time" class="nav-link"></span>
                         </li>
@@ -31,7 +36,7 @@
                             <div class="vr"></div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="learnings.html">learnings</a>
+                            <a class="nav-link " href="learnings.html">learnings</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="works.html">works</a>
@@ -43,6 +48,7 @@
                 </div>
             </div>
         </nav>
+
         
 
         <!-- main content ------------------------------------------------------------ -->
@@ -87,7 +93,7 @@
 
 
         <!-- footer section ------------------------------------------------ -->
-        <footer class="footer mt-auto py-2"> 
+        <footer class="footer mt-auto py-2 text-center"> 
             <div class="container"> 
                 <span class="text-body-secondary">reach me @sathvikpn 
                     <div class="vr"></div>
