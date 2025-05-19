@@ -3,71 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Sathvik's site</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-    <nav id="navbar-example" class="navbar navbar-expand-lg bg-light fixed-top">
-        <div class="container">
-            <div class="navbar-brand-container">
-                <a class="navbar-brand navbar-brand-title" href="#">Sathvik PN</a>
-                <span class="navbar-brand-subtitle">software engineer</span>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <span id="indian-time" class="nav-link"></span>
-                    </li>
-                    <div class="vr"></div>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">about</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="details.html">details</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <section id="about" class="container custom-section">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="custom-heading">readme</h3>
-                    <p class="custom-paragraph">
-                        brain not braining right now.
-                        will update this later. <br>
-                    </p>
+    <!-- wrapper div to keep website centered ------------------------------------- -->
+    <div class="wrapper">
+
+        <!-- navbar ----------------------------------------------------------------- -->
+        <nav id="navbar-example" class="navbar navbar-expand-lg bg-light fixed-top">
+
+            <div class="wrapper d-flex align-items-center justify-content-between flex-wrap">
+                <div class="navbar-brand-container">
+                    <a class="navbar-brand navbar-brand-title" href="#">Sathvik PN</a>
+                    <!-- <span class="navbar-brand-subtitle">software engineer</span> -->
                 </div>
-                <div class="col-md-6">
-                    <img src="https://pbs.twimg.com/profile_images/1733226010181771264/YlPo8owc_400x400.jpg" alt="Your Profile" class="img-fluid rounded-circle img-thumbnail">
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center flex-row gap-2">
+                        <li class="nav-item">
+                            <span id="indian-time" class="nav-link"></span>
+                        </li>
+                        <li class="nav-item">
+                            <div class="vr"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shelf">shelf</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="works.html">works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="scratch.html">scratch</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
+        </nav>
 
-    <footer class="bg-light py-4">
-        <div class="container text-center">
-            <p>sometime later</p>
-        </div>
-    </footer>
 
+        <!-- main content ------------------------------------------------------------ -->
+        <main>
+            <section id="about" class="container custom-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="custom-paragraph">
+                            hello, this is sathvik doing cs50x <br>
+                            you're viewing the homepage site. <br>
+                            building this to learn about webpages <hands-on>hands on</hands-on> <br>
+                            suggestions are welcome! <br>
+                        </p>
+
+                        <figure class="text-left">
+                            <blockquote class="blockquote">
+                                <p>we can just do things.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                someone <cite title="Source Title">X</cite>
+                            </figcaption>
+                        </figure>
+                        
+                    </div>
+
+                    <div class="col-md-4 offset-md-1 text-center">
+                        <img src="https://pbs.twimg.com/profile_images/1733226010181771264/YlPo8owc_400x400.jpg" 
+                            alt="Your Profile" 
+                            class="img-fluid rounded-circle img-thumbnail shadow-lg">
+                    </div>
+                </div>
+
+                
+            </section>
+
+
+
+            <section>
+                <!-- add all social media links -->
+                <div class="container text-left">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <p class="justify-content-start">
+                                reach me at 
+                                <a href="https://www.linkedin.com/in/sathvikpn/" target="_blank">LinkedIn</a>
+                                <a href="https://www.github.com/sathvikpn" target="_blank">GitHub</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            
+        </main>
+
+
+
+        <!-- footer section ------------------------------------------------ -->
+        <footer class="footer mt-auto py-2"> 
+            <div class="container"> 
+                <span class="text-body-secondary">Place sticky footer content here.</span> 
+            </div> 
+        </footer>
+
+    </div>
+   
+
+
+
+    <!-- javascript scripts ------------------------------------------------------------ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq4oDfGd" crossorigin="anonymous"></script>
     <script>
         // Function to update the Indian time
         function updateIndianTime() {
             const now = new Date();
-            document.getElementById('indian-time').textContent = now.toLocaleTimeString('en-IN',{ 
-                timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second:"numeric", hour12: true 
+            const timeString = now.toLocaleTimeString('en-IN', { 
+            timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true 
             }).replace(/am|pm/i, m => m.toUpperCase());
+            document.getElementById('indian-time').textContent = `${timeString} · Bengaluru, IN`;
         }
 
         // Dynamically set main's padding-top based on navbar height
@@ -79,6 +140,7 @@
                 main.style.paddingTop = navHeight + 'px';
             }
         }
+
         window.addEventListener('DOMContentLoaded', setMainPadding);
         window.addEventListener('resize', setMainPadding);
 
