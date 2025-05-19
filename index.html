@@ -120,7 +120,7 @@
             const timeString = now.toLocaleTimeString('en-IN', { 
             timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: "numeric", hour12: true 
             }).replace(/am|pm/i, m => m.toUpperCase());
-            document.getElementById('indian-time').textContent = `${timeString} · Bengaluru, IN`;
+            document.getElementById('indian-time').textContent = `${timeString} · Bengaluru`;
         }
 
         // Dynamically set main's padding-top based on navbar height
