@@ -50,16 +50,12 @@ footer {
     border-bottom: 1px solid #dee2e6;  /* Bottom border for navbar (Bootstrap color) */
 }
 
-.navbar-nav .nav-item {
-    margin: 0 0.2rem; 
+.navbar-nav .nav-item { 
+    margin-left: 0.5rem; 
 }
 
 #indian-time {
     font-weight: 500;       /* Bold font weight for time */
-}
-
-#indian-time .colon {
-    animation: blinker 1s linear infinite;  /* Blinking colon animation */
 }
 
 /* Navbar Brand Styles */
@@ -72,7 +68,7 @@ footer {
 .navbar-brand-title {
     font-size: 1.25rem;       /* Brand title font size */
     font-weight: bold;           /* Brand title font weight */
-    margin-left: 0.7rem;          /* Margin for brand title */
+    margin-left: 0.5rem;          /* Margin for brand title */
 }
 
 /* removed subtitle for now
