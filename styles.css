@@ -51,7 +51,7 @@ footer {
 }
 
 .navbar-nav .nav-item {
-    margin-left: 0.5rem; 
+    margin: 0 0.2rem; 
 }
 
 #indian-time {
@@ -124,3 +124,16 @@ img:hover {
     margin-inline: 1rem; /* Space between elements */
 }
 
+.active {
+    /* make slightly different to notify active page */
+    color: #444444;
+    font-weight: 600;
+    text-decoration: wavy;
+    text-decoration-color: #444444;
+    text-underline-offset: 0.2rem;
+    text-decoration-thickness: 0.1rem;
+    text-underline-position: under;
+    text-decoration-skip-ink: none;
+    text-decoration-skip: objects;
+    
+}
