@@ -101,7 +101,7 @@ footer {
 .custom-paragraph {
     margin-left: 0rem;
     font-size: 1.1rem;         
-    line-height: 1.7;          
+    line-height: 2;          
     color: #6c757d;           
 }
 
@@ -113,4 +113,14 @@ a {
 }
 a:hover {border-bottom: 0;}
 
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.vr {
+    border-left: 1px solid #2e2f30; /* Bootstrap color */
+    height: 100%;
+    margin-inline: 1rem; /* Space between elements */
+}
 
